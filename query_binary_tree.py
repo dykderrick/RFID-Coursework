@@ -63,8 +63,8 @@ class Algorithm:
                 self.results.append({"Query": binary_query.to01(), "Response": "Idle"})
 
                 while binary_query[-1]:
-                    del binary_query[-1]
-                binary_query[-1] = 1
+                    del binary_query[-1]  # pop
+                binary_query[-1] = 1  # 0 to 1 is just like pop 0 and push 1
 
             elif len(hits) == 1:
                 # HIT
@@ -74,10 +74,10 @@ class Algorithm:
                     break
 
                 if not binary_query[-1]:
-                    binary_query[-1] = 1
+                    binary_query[-1] = 1  # pop 0 and push 1
                 else:
                     while binary_query[-1]:
-                        del binary_query[-1]
+                        del binary_query[-1]  # pop
                     binary_query[-1] = 1
 
             elif len(hits) > 1:
