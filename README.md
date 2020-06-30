@@ -1,5 +1,6 @@
 # RFID-Coursework
 BUPT RFID Coursework - Using Query Binary Tree to Avoid Collision for RFID taags
+Github homepage: [RFID-Coursework](https://github.com/dykderrick/RFID-Coursework)
 
 ## Requirements
 Please run the following command to enable bitwise operations.  
